@@ -1,0 +1,34 @@
+% 导言区
+\documentclass{ctexart}%ctexbook, ctexrep
+
+%\usepackage{ctex}
+
+% 语  法： 
+% \begin{tabular}[< 垂直对齐方式 >]{< 列格式说明 >}
+%     <表项> & <> & ... & <> \\
+%     ......
+% \end{tabular}
+% 用\\表示换行
+% 用&表示不同列
+% l-本列左对齐
+% c-本列居中对齐
+% r-本列右对齐
+% p{<宽>}-本列宽度固定，自动换行
+
+% booktab 三线表
+% longtable 跨页长表格
+% tabu 综合表格 
+
+% 正文区（文稿区）
+\begin{document}
+    \begin{tabular}{|l|c|c|c|p{1.5cm}|}
+    	\hline
+        姓名 & 语文 & 数学 & 语文 & 备注 \\
+        \hline 
+        张三 & 89   & 100 & 93   & 优秀	\\
+        \hline
+        李四 & 20   & 40  & 59   & 补考另行通知 \\
+        \hline
+    \end{tabular}
+% 帮助文档见 graphicx	
+\end{document}

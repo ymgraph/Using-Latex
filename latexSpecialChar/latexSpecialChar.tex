@@ -1,0 +1,105 @@
+% 导言区
+\documentclass{article}%ctexbook, ctexrep
+
+\usepackage{ctex}
+\usepackage{xltxtra}
+%提供了针对XeTeX的改进并加入了XeTeX的LOGO
+\usepackage{texnames}% 一些logo
+\usepackage{mflogo}
+
+
+% 正文区（文稿区）
+\begin{document}
+	\section{空白符号}
+	% 空行分段，多个空行等同1个（\par）
+	% 自动缩进，绝对不能使用空格代替
+	% 英文中多个空格处理为1个空格，中文中空格将被忽略
+	% 汉字与其他字符的间距会自动由XeLaTeX处理
+	% 禁止使用中文全角空格
+	
+	% 1em(当前字体中M的宽度)
+	a\quad b
+	
+	% 2em
+	a\qquad b
+	
+	% 约为1/6个em
+	a\, b a\thinspace b
+	
+	% 0.5个em
+	a\enspace b
+	
+	% 空格
+	a\ b
+	
+	% 硬空格
+	a~b
+	
+	% 1pc=12pt=4.218mm
+	a\kern 1pc b
+	
+	a\kern -1em b
+	
+	a\hskip 1em b
+	
+	a\hspace{35pt} b
+	
+	% 占位宽度
+	a\hphantom{xyz} b
+	
+	% 弹性长度(撑满整个空间)
+	a\hfill b
+	\section{\LaTeX 控制符}
+	\# \$ \% \{ \} \~{}  \_{} \^{} \textbackslash  
+	\&
+	\section{排版符号}
+	\S \P \dag \ddag \copyright \pounds
+	\section{\TeX 标志符号}
+	%基本符号
+	\TeX{} \LaTeX{} \LaTeXe{}
+	% xltxtra宏包提供
+	\XeLaTeX{}
+	
+	% texnames宏包提供
+	\AmSTeX{} \AmS-\LaTeX{}
+	\BibTeX{} \LuaTeX{}
+	
+	% mflogo宏包提供
+	\METAFONT{} \MF{} \MP{} 
+	\section{引号}
+	` ' `` ''
+	\section{连字符}
+	- -- ---
+	\section{非英文符}
+	\oe \OE \ae \AE \aa \AA \o \O \l \L \ss \SS !` ?`
+	\section{重音符号（以o为例）}
+	\`o
+	
+	\'o
+	
+	\^o
+	
+	\''o
+	
+	\~o
+	
+	\=o
+	
+	\.o
+	
+	\u{o}
+	
+	\v{o}
+	
+	\H{o}
+	
+	\r{o}
+	
+	\t{o}
+	
+	\b{o}
+	
+	\c{o}
+	
+	\d{o}
+\end{document}

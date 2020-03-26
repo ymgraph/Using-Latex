@@ -1,0 +1,78 @@
+% 导言区
+\documentclass{ctexart}%ctexbook, ctexrep
+
+%\usepackage{ctex}
+\usepackage{amsmath}
+\usepackage{amssymb}
+% 正文区（文稿区）
+\begin{document}
+    \section{简介}
+    \LaTeX{} 将排版模式分为文本模式和数学模式。文本模式用于普通文本排版，数学模式用于数学公式排版。
+    \section{行内公式}
+    \subsection{美元符号}
+    交换律是 $a+b=b+a$
+    \subsection{小括号}
+    交换律是 \(a+b=b+a\)
+    \subsection{math环境}
+    交换律是 \begin{math}
+    	a+b=b+a
+    \end{math}
+    \section{上下标}
+    \subsection{上标}
+    \subsection{下标}
+    \section{希腊字母}
+    \section{数学函数}
+    \section{分式}
+    \section{行间公式}
+    \section{矩阵的排版}
+    \[
+    \begin{matrix}
+    	0 & 1\\
+    	1 & 0
+    \end{matrix}
+     \]
+     \[
+     \begin{pmatrix}
+     	0 & 1\\
+     	1 & 0
+     \end{pmatrix}
+     \]
+     复杂矩阵可用array环境
+     \section{多行公式}
+     \begin{gather}
+     	a + b = b + a \\
+     	a \times b = b \times a 
+     \end{gather}
+     % 取消编号
+     \begin{gather*}
+        a + b = b + a \\
+        a \times b = b \times a 
+     \end{gather*}
+     % 在\\前使用\notag 阻止编号
+     \begin{gather}
+     	a + b = b + a \notag \\
+     	a \times b = b \times a 
+     \end{gather}
+     
+     % align 和 align* 环境(用& 进行对齐)  
+     %带编号
+     \begin{align}
+     	x & = t + \cos t + 1 \\
+     	y & = 2\sin t
+     \end{align} 
+     %不带编号  
+     \begin{align*}
+         x & = t + \cos t + 1 \\
+         y & = 2\sin t
+     \end{align*}
+     
+     % split环境将一个公式多行排版
+     \begin{equation}
+     \begin{split}
+     \cos 2x &= \cos^2 x - \sin^x \\
+     &= 2\cos^2 x - 1
+     \end{split}
+     \end{equation}
+     
+     % case环境表示分段函数
+\end{document}
